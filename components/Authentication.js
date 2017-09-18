@@ -65,7 +65,7 @@ class Authentication extends Component {
     if (this.state.loading) {
         return <ActivityIndicator size='small' />;    
     }
-    return <Button color="000000" onPress={this.userAuth.bind(this)} title="Log in/Sign up" />;
+    return <Button color="f0f" onPress={this.userAuth.bind(this)} title="Log in/Sign up" />;
   }
   render() {
     return (
