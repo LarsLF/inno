@@ -125,7 +125,7 @@ var styles = StyleSheet.create({
   },
 /*
 
-LOGIN KNAP FARVE
+LOGIN KNAP FARVE test
   loginbutton: {
     color: '#ff00ff',    
   } 
