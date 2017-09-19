@@ -6,7 +6,7 @@ import StatusBar from './StatusBar';
 import ActionButton from './ActionButton';
 import ListItem from './ListItem';
 import styles from '../styles';
-import Topic from './Topic';
+import HomePage from './HomePage';
 import BottomToolbar from 'react-native-bottom-toolbar'
 
 const {
@@ -23,7 +23,7 @@ const {
 
 //definnere hvad classen hedder og hvad den extender
 
-class HomePage extends Component {
+class Topic extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,7 +37,8 @@ class HomePage extends Component {
     try {
       await AsyncStorage.removeItem('id_token');
       Alert.alert('Log Out Successfully!');
-      Actions.Authentication();
+
+    Actions.Authentication();
     } catch (error) {
       console.log('AsyncStorage error: ' + error.message);
     }
@@ -69,7 +70,7 @@ class HomePage extends Component {
   render() {
     return (
       <KeyboardAvoidingView style={styles.listContainer} behavior="padding" >
-        <StatusBar onPress={this.userLogout.bind(this)} title="DØK Channel" />
+        <StatusBar onPress={this.userLogout.bind(this)} title="test Channel" />
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this._renderItem.bind(this)}
@@ -81,11 +82,12 @@ class HomePage extends Component {
           onChangeText={(text) => this.setState({text})}
         />
         <ActionButton onPress={this._addItem.bind(this)} title="Add" />
+
         <BottomToolbar>
               <BottomToolbar.Action
                 title="Home"
                 onPress={(index, propsOfThisAction) =>
-                  Actions.Topic()}
+                  Actions.HomePage()}
               />
               <BottomToolbar.Action
                 title="Noti"
@@ -98,32 +100,32 @@ class HomePage extends Component {
                   console.warn(index + ' ' + JSON.stringify(propsOfThisAction))}
               />
             </BottomToolbar>
+
       </KeyboardAvoidingView>
-
-
     )
   }
   _addItem() {
     this.itemsRef.push({ title: this.state.text });
   }
+
   _renderItem(item) {
     const onPress = () => {
-      Actions.Topic()
+      Alert.alert(
+        'Show: '+item.title+'?',
         null,
         [
           {text: 'Yes', onPress: (text) => Actions.Topic()},
           {text: 'Cancel', onPress: (text) => console.log('Cancelled')}
         ],
         {cancelable: false}
-
+      );
     };
 
     return (
       <ListItem item={item} onPress={onPress} />
     );
   }
-
-  }
+}
 
 //Exporterer til app.js så den kan bruges
-module.exports = HomePage;
+module.exports = Topic;

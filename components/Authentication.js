@@ -67,7 +67,11 @@ class Authentication extends Component {
     }
     return <Button color="f0f" onPress={this.userAuth.bind(this)} title="Log in/Sign up" />;
   }
+
+
+
   render() {
+  
     return (
       <KeyboardAvoidingView style={styles.container} behavior='padding'>
         <Text style={styles.title}>Welcome to SILO!</Text>

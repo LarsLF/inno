@@ -6,10 +6,11 @@ const constants = {
 
 var styles = StyleSheet.create({
   container: {
-    backgroundColor: '#FFB541',
+    backgroundColor: '#FEB542',
     justifyContent: 'center',
     height: '100%',
     padding: 50
+
   },
   listContainer: {
     backgroundColor: '#f2f2f2',
@@ -65,13 +66,15 @@ var styles = StyleSheet.create({
     textAlign: 'center',
   },
   action: {
-    backgroundColor: '#FFB541',
+    backgroundColor: '#FEB542',
     borderColor: 'transparent',
     borderWidth: 1,
     paddingLeft: 16,
     paddingTop: 14,
     paddingBottom: 16,
+
   },
+
   form: {
     backgroundColor: '#FFB541'
   },
@@ -108,8 +111,13 @@ var styles = StyleSheet.create({
     paddingBottom: 10
   },
   alignRight: {
-    flex: 1
+    flex: 1,
   },
+
+  alignLeft: {
+    flex: 0
+  },
+
   whiteAction: {
     color: '#E64A19'
   }
