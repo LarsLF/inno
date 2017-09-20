@@ -10,8 +10,8 @@ class StatusBar extends Component {
         <View style={styles.statusbar}/>
         <View style={styles.navbar}>
           <Text style={styles.navbarTitle}>{this.props.title}</Text>
-          <Button color="f0f" style={styles.alignRight} onPress={this.props.onPress} title="Log out" />
-          <Button color="f0f" style={styles.alignLeft} onPress={this.props.onPress} title="Channel Menu" />
+          <Button color="ffffff" style={styles.alignRight} onPress={this.props.onPress} title="Log out" />
+          <Button color="ffffff" style={styles.alignLeft} onPress={this.props.onPress} title="Channel Menu" />
 
         </View>
       </View>

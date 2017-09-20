@@ -85,7 +85,7 @@ class HomePage extends Component {
               <BottomToolbar.Action
                 title="Home"
                 onPress={(index, propsOfThisAction) =>
-                  Actions.Topic()}
+                  Actions.HomePage()}
               />
               <BottomToolbar.Action
                 title="Noti"
