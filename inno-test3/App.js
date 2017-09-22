@@ -5,6 +5,26 @@ import * as firebase from 'firebase';
 import Authentication from './components/Authentication';
 import HomePage from './components/HomePage';
 import Topic from './components/Topic';
+import {DrawerNavigator } from 'react-navigation';
+import SecondScreen from './components/SecondScreen'
+const DrawerExample = Drawernavigator(
+{
+  First: {
+    path: '/',
+    screen: HomePage
+
+  },
+  Second: {
+    path: '/sent',
+    screen: SecondScreen
+  },
+},
+{
+  initialRouteName: 'First',
+  drawerPosition: 'left'
+}
+);
+export default DrawerExample;
 
 
 

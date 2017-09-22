@@ -30,7 +30,7 @@ class HomePage extends React.Component {
     drawerIcon: ({tintColor}) => {
       return (
         <MaterialIcons
-        name="card-membership"
+        name="change-history"
         size={24}
         style={{color: tintColor}}
         >
@@ -48,7 +48,7 @@ class HomePage extends React.Component {
       }
     
     }>
-    <Text style ={{fontSize: 30, color: 'green'}}>
+    <Text style ={{fontSize: 30, color: 'blue'}}>
       Screen 1 
       </Text>
       <Button 
